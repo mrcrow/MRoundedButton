@@ -25,6 +25,7 @@
     [imageView setImageToBlur:[UIImage imageNamed:@"pic"] completionBlock:NULL];
     [self.view addSubview:imageView];
     
+    
     CGFloat backgroundViewHeight = ceilf(CGRectGetHeight([UIScreen mainScreen].bounds)/ 3.0);
     CGFloat backgroundViewWidth = CGRectGetWidth(self.view.bounds);
     

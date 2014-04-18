@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, MRoundedButtonStyle) {
     MRoundedButtonImageWithSubtitle
 };
 
+
 @interface MRoundedButton : UIControl
 
 @property (readonly, nonatomic) MRoundedButtonStyle         mr_buttonStyle;

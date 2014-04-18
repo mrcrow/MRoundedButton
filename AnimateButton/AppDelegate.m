@@ -18,6 +18,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
+    
     NSDictionary *appearanceProxy1 = @{kMRoundedButtonCornerRadius : @40,
                                        kMRoundedButtonBorderWidth  : @2,
                                        kMRoundedButtonBorderColor  : [UIColor clearColor],
