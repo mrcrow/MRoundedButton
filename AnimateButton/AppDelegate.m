@@ -7,12 +7,52 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import <Crashlytics/Crashlytics.h>
+#import "MRoundedButton.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [Crashlytics startWithAPIKey:@"4a1012b16bb1458a6250cf50bef2bc522ce3d8a4"];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    NSDictionary *appearanceProxy1 = @{kMRoundedButtonCornerRadius : @40,
+                                       kMRoundedButtonBorderWidth  : @2,
+                                       kMRoundedButtonBorderColor  : [UIColor clearColor],
+                                       kMRoundedButtonContentColor : [UIColor blackColor],
+                                       kMRoundedButtonContentAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonForegroundColor : [UIColor whiteColor],
+                                       kMRoundedButtonForegroundAnimationColor : [UIColor clearColor]};
+    NSDictionary *appearanceProxy2 = @{kMRoundedButtonCornerRadius : @25,
+                                       kMRoundedButtonBorderWidth  : @1.5,
+                                       kMRoundedButtonRestoreHighlightState : @NO,
+                                       kMRoundedButtonBorderColor : [UIColor colorWithWhite:0.3 alpha:1.0],
+                                       kMRoundedButtonBorderAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonContentColor : [UIColor grayColor],
+                                       kMRoundedButtonContentAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonForegroundColor : [[UIColor whiteColor] colorWithAlphaComponent:0.5]};
+    NSDictionary *appearanceProxy3 = @{kMRoundedButtonCornerRadius : @40,
+                                       kMRoundedButtonBorderWidth  : @2,
+                                       kMRoundedButtonRestoreHighlightState : @NO,
+                                       kMRoundedButtonBorderColor : [UIColor clearColor],
+                                       kMRoundedButtonBorderAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonContentColor : [UIColor whiteColor],
+                                       kMRoundedButtonContentAnimationColor : [UIColor blackColor],
+                                       kMRoundedButtonForegroundColor : [[UIColor blackColor] colorWithAlphaComponent:0.5],
+                                       kMRoundedButtonForegroundAnimationColor : [UIColor whiteColor]};
+    
+    [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy1 forIdentifier:@"1"];
+    [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy2 forIdentifier:@"2"];
+    [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy3 forIdentifier:@"3"];
+    
+    ViewController *controller = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = controller;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 							

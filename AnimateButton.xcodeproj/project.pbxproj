@@ -13,7 +13,6 @@
 		C113692B18C3441100034926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C113692918C3441100034926 /* InfoPlist.strings */; };
 		C113692D18C3441100034926 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C113692C18C3441100034926 /* main.m */; };
 		C113693118C3441100034926 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C113693018C3441100034926 /* AppDelegate.m */; };
-		C113693418C3441100034926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C113693218C3441100034926 /* Main.storyboard */; };
 		C113693718C3441100034926 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C113693618C3441100034926 /* ViewController.m */; };
 		C113693918C3441100034926 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C113693818C3441100034926 /* Images.xcassets */; };
 		C113694018C3441100034926 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113693F18C3441100034926 /* XCTest.framework */; };
@@ -21,6 +20,12 @@
 		C113694218C3441100034926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113692418C3441100034926 /* UIKit.framework */; };
 		C113694A18C3441100034926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C113694818C3441100034926 /* InfoPlist.strings */; };
 		C113694C18C3441100034926 /* AnimateButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C113694B18C3441100034926 /* AnimateButtonTests.m */; };
+		C1136A0818C9871100034926 /* MRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1136A0518C9871100034926 /* MRoundedButton.m */; };
+		C13A4CFF18D0101800EBE3D9 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C13A4CFE18D0101800EBE3D9 /* Crashlytics.framework */; };
+		C13A4D0718D01E1000EBE3D9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */; };
+		C13A4D0918D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */; };
+		C13A4D0C18D01E4400EBE3D9 /* UIImage+TintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = C13A4D0B18D01E4400EBE3D9 /* UIImage+TintColor.m */; };
+		C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C168241F18E27D2A00BDC643 /* twitter@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +49,6 @@
 		C113692E18C3441100034926 /* AnimateButton-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AnimateButton-Prefix.pch"; sourceTree = "<group>"; };
 		C113692F18C3441100034926 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C113693018C3441100034926 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C113693318C3441100034926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C113693518C3441100034926 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C113693618C3441100034926 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C113693818C3441100034926 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -53,6 +57,16 @@
 		C113694718C3441100034926 /* AnimateButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimateButtonTests-Info.plist"; sourceTree = "<group>"; };
 		C113694918C3441100034926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C113694B18C3441100034926 /* AnimateButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateButtonTests.m; sourceTree = "<group>"; };
+		C1136A0418C9871100034926 /* MRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRoundedButton.h; sourceTree = "<group>"; };
+		C1136A0518C9871100034926 /* MRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRoundedButton.m; sourceTree = "<group>"; };
+		C13A4CFE18D0101800EBE3D9 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		C13A4D0118D01E1000EBE3D9 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		C13A4D0518D01E1000EBE3D9 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
+		C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
+		C13A4D0A18D01E4400EBE3D9 /* UIImage+TintColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TintColor.h"; sourceTree = "<group>"; };
+		C13A4D0B18D01E4400EBE3D9 /* UIImage+TintColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TintColor.m"; sourceTree = "<group>"; };
+		C168241F18E27D2A00BDC643 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +76,7 @@
 			files = (
 				C113692318C3441100034926 /* CoreGraphics.framework in Frameworks */,
 				C113692518C3441100034926 /* UIKit.framework in Frameworks */,
+				C13A4CFF18D0101800EBE3D9 /* Crashlytics.framework in Frameworks */,
 				C113692118C3441100034926 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +116,7 @@
 		C113691F18C3441100034926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C13A4CFE18D0101800EBE3D9 /* Crashlytics.framework */,
 				C113692018C3441100034926 /* Foundation.framework */,
 				C113692218C3441100034926 /* CoreGraphics.framework */,
 				C113692418C3441100034926 /* UIKit.framework */,
@@ -112,9 +128,9 @@
 		C113692618C3441100034926 /* AnimateButton */ = {
 			isa = PBXGroup;
 			children = (
+				C11369FE18C9871100034926 /* MRoundButton */,
 				C113692F18C3441100034926 /* AppDelegate.h */,
 				C113693018C3441100034926 /* AppDelegate.m */,
-				C113693218C3441100034926 /* Main.storyboard */,
 				C113693518C3441100034926 /* ViewController.h */,
 				C113693618C3441100034926 /* ViewController.m */,
 				C113693818C3441100034926 /* Images.xcassets */,
@@ -126,6 +142,7 @@
 		C113692718C3441100034926 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C168241F18E27D2A00BDC643 /* twitter@2x.png */,
 				C113692818C3441100034926 /* AnimateButton-Info.plist */,
 				C113692918C3441100034926 /* InfoPlist.strings */,
 				C113692C18C3441100034926 /* main.m */,
@@ -152,6 +169,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C11369FE18C9871100034926 /* MRoundButton */ = {
+			isa = PBXGroup;
+			children = (
+				C13A4D0018D01E1000EBE3D9 /* Vendors */,
+				C1136A0418C9871100034926 /* MRoundedButton.h */,
+				C1136A0518C9871100034926 /* MRoundedButton.m */,
+			);
+			path = MRoundButton;
+			sourceTree = "<group>";
+		};
+		C13A4D0018D01E1000EBE3D9 /* Vendors */ = {
+			isa = PBXGroup;
+			children = (
+				C13A4D0118D01E1000EBE3D9 /* UIImage+ImageEffects.h */,
+				C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */,
+				C13A4D0A18D01E4400EBE3D9 /* UIImage+TintColor.h */,
+				C13A4D0B18D01E4400EBE3D9 /* UIImage+TintColor.m */,
+				C13A4D0518D01E1000EBE3D9 /* UIImageView+LBBlurredImage.h */,
+				C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */,
+			);
+			path = Vendors;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +202,7 @@
 				C113691918C3441100034926 /* Sources */,
 				C113691A18C3441100034926 /* Frameworks */,
 				C113691B18C3441100034926 /* Resources */,
+				C13A4CFD18D00FC000EBE3D9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -230,7 +271,7 @@
 			files = (
 				C113693918C3441100034926 /* Images.xcassets in Resources */,
 				C113692B18C3441100034926 /* InfoPlist.strings in Resources */,
-				C113693418C3441100034926 /* Main.storyboard in Resources */,
+				C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,13 +285,33 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C13A4CFD18D00FC000EBE3D9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 4a1012b16bb1458a6250cf50bef2bc522ce3d8a4 a2a7ac4112131ee128d5038c7f97edf07f1f15f57259434e77ff355cee54cfb7";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C113691918C3441100034926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13A4D0C18D01E4400EBE3D9 /* UIImage+TintColor.m in Sources */,
 				C113693718C3441100034926 /* ViewController.m in Sources */,
+				C13A4D0718D01E1000EBE3D9 /* UIImage+ImageEffects.m in Sources */,
 				C113693118C3441100034926 /* AppDelegate.m in Sources */,
+				C13A4D0918D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m in Sources */,
+				C1136A0818C9871100034926 /* MRoundedButton.m in Sources */,
 				C113692D18C3441100034926 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,14 +341,6 @@
 				C113692A18C3441100034926 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		C113693218C3441100034926 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C113693318C3441100034926 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		C113694818C3441100034926 /* InfoPlist.strings */ = {
@@ -378,6 +431,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mmt/Dropbox/UnderGoing/AnimateButton,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimateButton/AnimateButton-Prefix.pch";
 				INFOPLIST_FILE = "AnimateButton/AnimateButton-Info.plist";
@@ -391,6 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/mmt/Dropbox/UnderGoing/AnimateButton,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AnimateButton/AnimateButton-Prefix.pch";
 				INFOPLIST_FILE = "AnimateButton/AnimateButton-Info.plist";
@@ -460,6 +521,7 @@
 				C113695118C3441100034926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C113695218C3441100034926 /* Build configuration list for PBXNativeTarget "AnimateButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +530,7 @@
 				C113695418C3441100034926 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
