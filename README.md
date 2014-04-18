@@ -1,4 +1,4 @@
 MRoundedButton
 ==============
 
-A rounded button 
+MRoundedButton is a drop replacement of UIButton.
