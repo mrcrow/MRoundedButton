@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import <Crashlytics/Crashlytics.h>
 #import "MRoundedButton.h"
 
 @implementation AppDelegate
@@ -16,7 +15,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [Crashlytics startWithAPIKey:@"4a1012b16bb1458a6250cf50bef2bc522ce3d8a4"];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
