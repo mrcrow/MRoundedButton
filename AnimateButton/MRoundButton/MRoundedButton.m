@@ -9,6 +9,8 @@
 #import "MRoundedButton.h"
 #import <QuartzCore/QuartzCore.h>
 
+CGFloat const MRoundedButtonMaxValue = CGFLOAT_MAX;
+
 #define M_MAX_CORNER_RADIUS MIN(CGRectGetWidth(self.bounds) / 2.0, CGRectGetHeight(self.bounds) / 2.0)
 #define M_MAX_BORDER_WIDTH  M_MAX_CORNER_RADIUS
 #define M_MAGICAL_VALUE     0.29
@@ -162,11 +164,19 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.foregroundView.frame = CGRectMake(_borderWidth - 0.1,
-                                           _borderWidth - 0.1,
-                                           CGRectGetWidth(self.bounds) - _borderWidth * 2 + 0.2,
-                                           CGRectGetHeight(self.bounds) - _borderWidth * 2 + 0.2);
-    self.foregroundView.layer.cornerRadius = _cornerRadius - _borderWidth;
+    
+    CGFloat cornerRadius = self.layer.cornerRadius = MAX(MIN(M_MAX_CORNER_RADIUS, self.cornerRadius), 0);
+    CGFloat borderWidth = self.layer.borderWidth = MAX(MIN(M_MAX_BORDER_WIDTH, self.borderWidth), 0);
+    
+    _borderWidth = borderWidth;
+    _cornerRadius = cornerRadius;
+    
+    CGFloat layoutBorderWidth = borderWidth == 0.0 ? 0.0 : borderWidth - 0.1;
+    self.foregroundView.frame = CGRectMake(layoutBorderWidth,
+                                           layoutBorderWidth,
+                                           CGRectGetWidth(self.bounds) - layoutBorderWidth * 2,
+                                           CGRectGetHeight(self.bounds) - layoutBorderWidth * 2);
+    self.foregroundView.layer.cornerRadius = cornerRadius - borderWidth;
     
     switch (self.mr_buttonStyle)
     {
@@ -247,7 +257,6 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
     }
     
     _cornerRadius = cornerRadius;
-    self.layer.cornerRadius = _cornerRadius;
     [self setNeedsLayout];
 }
 
@@ -259,7 +268,6 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
     }
     
     _borderWidth = borderWidth;
-    self.layer.borderWidth = _borderWidth;
     [self setNeedsLayout];
 }
 

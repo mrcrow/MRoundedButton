@@ -15,6 +15,7 @@ typedef NS_ENUM(NSInteger, MRoundedButtonStyle) {
     MRoundedButtonImageWithSubtitle
 };
 
+extern CGFloat const MRoundedButtonMaxValue;
 
 @interface MRoundedButton : UIControl
 
