@@ -21,15 +21,15 @@ extern CGFloat const MRoundedButtonMaxValue;
 
 @property (readonly, nonatomic) MRoundedButtonStyle         mr_buttonStyle;
 @property (readonly, assign)    BOOL                        mr_buttonHighlighted;
-@property (nonatomic, assign)   CGFloat                     cornerRadius;                   UI_APPEARANCE_SELECTOR
-@property (nonatomic, assign)   CGFloat                     borderWidth;                    UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   CGFloat                     cornerRadius;               UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   CGFloat                     borderWidth;                UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *borderColor;               UI_APPEARANCE_SELECTOR
-@property (nonatomic, strong)   UIColor                     *contentColor;                 UI_APPEARANCE_SELECTOR
-@property (nonatomic, strong)   UIColor                     *foregroundColor;                 UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *contentColor;              UI_APPEARANCE_SELECTOR
+@property (nonatomic, strong)   UIColor                     *foregroundColor;           UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *borderAnimationColor;      UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *contentAnimationColor;     UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *foregroundAnimationColor;  UI_APPEARANCE_SELECTOR
-@property (nonatomic, assign)   BOOL                        restoreHighlightState;                UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   BOOL                        restoreHighlightState;      UI_APPEARANCE_SELECTOR
 
 @property (nonatomic, weak)     UILabel                     *textLabel;
 @property (nonatomic, weak)     UILabel                     *detailTextLabel;
