@@ -13,7 +13,7 @@ Four button styles are suplied:
 MRoundedButtonAppearanceManager
 ===============================
 
-MRoundedButtonAppearanceManager is the appearance manager for the MRoundedButton, the appearance information can be stored in an [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object:
+MRoundedButtonAppearanceManager is the appearance manager for the MRoundedButton, each appearance information can be stored in an [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object with a unique identifier:
 
     NSDictionary *appearanceProxy = @{kMRoundedButtonCornerRadius : @40,
                                       kMRoundedButtonBorderWidth  : @2,
