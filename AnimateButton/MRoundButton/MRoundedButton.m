@@ -258,8 +258,8 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         return;
     }
     
-    [[appearanceProxy allKeys] enumerateObjectsUsingBlock:^(NSString *key, NSUInteger idx, BOOL *stop) {
-        [self setValue:[appearanceProxy objectForKey:key] forKey:key];
+    [appearanceProxy enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        [self setValue:obj forKey:key];
     }];
 }
 
