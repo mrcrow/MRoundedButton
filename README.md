@@ -30,6 +30,12 @@ MRHollowView
 MRHollowView can be used to place the MRoundedButton on an image view or something.
 > In the drawRect: method, each subview of HRHollowView are EO cliped to its bounds. Then the superview content can be displayed via the hollowed shapes.
     
+TODO
+====
+1. Fix typo (I'm not a native English speaker, so I need your help)
+2. Border issue
+3. Make it Cocoapods
+    
 Lisence
 =======
 > Permission is hereby granted, free of charge, to any person obtaining a copy
