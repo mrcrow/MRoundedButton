@@ -24,6 +24,7 @@
 		C1E42809192A037E0086BC61 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */; };
 		C1E4280A192A037E0086BC61 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */; };
 		C1E42812192A04960086BC61 /* MRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42811192A04960086BC61 /* MRoundedButton.m */; };
+		C1E42814192A08150086BC61 /* present.PNG in Resources */ = {isa = PBXBuildFile; fileRef = C1E42813192A08150086BC61 /* present.PNG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
 		C1E42810192A04960086BC61 /* MRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRoundedButton.h; sourceTree = "<group>"; };
 		C1E42811192A04960086BC61 /* MRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRoundedButton.m; sourceTree = "<group>"; };
+		C1E42813192A08150086BC61 /* present.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = present.PNG; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		C113692718C3441100034926 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C1E42813192A08150086BC61 /* present.PNG */,
 				C168241F18E27D2A00BDC643 /* twitter@2x.png */,
 				C113692818C3441100034926 /* AnimateButton-Info.plist */,
 				C113692918C3441100034926 /* InfoPlist.strings */,
@@ -263,6 +266,7 @@
 				C113693918C3441100034926 /* Images.xcassets in Resources */,
 				C113692B18C3441100034926 /* InfoPlist.strings in Resources */,
 				C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */,
+				C1E42814192A08150086BC61 /* present.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
