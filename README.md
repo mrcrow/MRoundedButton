@@ -1,7 +1,7 @@
 MRoundedButton
 ==============
 
-<img src="https://github.com/mrcrow/MRoundedButton/blob/master/present.PNG">
+![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.PNG)
 
 MRoundedButton is a subclass of UIControl and the appearance is like the iOS 7 **Phone** app button or the button on the **Control Center** and also perform fade in/out animation for touch event.
 
