@@ -20,10 +20,10 @@
 		C113694218C3441100034926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113692418C3441100034926 /* UIKit.framework */; };
 		C113694A18C3441100034926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C113694818C3441100034926 /* InfoPlist.strings */; };
 		C113694C18C3441100034926 /* AnimateButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C113694B18C3441100034926 /* AnimateButtonTests.m */; };
-		C1136A0818C9871100034926 /* MRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1136A0518C9871100034926 /* MRoundedButton.m */; };
-		C13A4D0718D01E1000EBE3D9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */; };
-		C13A4D0918D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */; };
 		C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C168241F18E27D2A00BDC643 /* twitter@2x.png */; };
+		C1E42809192A037E0086BC61 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */; };
+		C1E4280A192A037E0086BC61 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */; };
+		C1E4280E192A03900086BC61 /* MRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E4280D192A03900086BC61 /* MRoundedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +55,13 @@
 		C113694718C3441100034926 /* AnimateButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimateButtonTests-Info.plist"; sourceTree = "<group>"; };
 		C113694918C3441100034926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C113694B18C3441100034926 /* AnimateButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateButtonTests.m; sourceTree = "<group>"; };
-		C1136A0418C9871100034926 /* MRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRoundedButton.h; sourceTree = "<group>"; };
-		C1136A0518C9871100034926 /* MRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRoundedButton.m; sourceTree = "<group>"; };
-		C13A4D0118D01E1000EBE3D9 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
-		C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		C13A4D0518D01E1000EBE3D9 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
-		C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
 		C168241F18E27D2A00BDC643 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
+		C1E42805192A037E0086BC61 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		C1E42807192A037E0086BC61 /* UIImageView+LBBlurredImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LBBlurredImage.h"; sourceTree = "<group>"; };
+		C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LBBlurredImage.m"; sourceTree = "<group>"; };
+		C1E4280C192A03900086BC61 /* MRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MRoundedButton.h; sourceTree = "<group>"; };
+		C1E4280D192A03900086BC61 /* MRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MRoundedButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +121,8 @@
 		C113692618C3441100034926 /* AnimateButton */ = {
 			isa = PBXGroup;
 			children = (
-				C11369FE18C9871100034926 /* MRoundButton */,
+				C1E4280B192A03900086BC61 /* MRoundedButton */,
+				C1E42804192A037E0086BC61 /* Vendors */,
 				C113692F18C3441100034926 /* AppDelegate.h */,
 				C113693018C3441100034926 /* AppDelegate.m */,
 				C113693518C3441100034926 /* ViewController.h */,
@@ -162,25 +163,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C11369FE18C9871100034926 /* MRoundButton */ = {
+		C1E42804192A037E0086BC61 /* Vendors */ = {
 			isa = PBXGroup;
 			children = (
-				C13A4D0018D01E1000EBE3D9 /* Vendors */,
-				C1136A0418C9871100034926 /* MRoundedButton.h */,
-				C1136A0518C9871100034926 /* MRoundedButton.m */,
-			);
-			path = MRoundButton;
-			sourceTree = "<group>";
-		};
-		C13A4D0018D01E1000EBE3D9 /* Vendors */ = {
-			isa = PBXGroup;
-			children = (
-				C13A4D0118D01E1000EBE3D9 /* UIImage+ImageEffects.h */,
-				C13A4D0218D01E1000EBE3D9 /* UIImage+ImageEffects.m */,
-				C13A4D0518D01E1000EBE3D9 /* UIImageView+LBBlurredImage.h */,
-				C13A4D0618D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m */,
+				C1E42805192A037E0086BC61 /* UIImage+ImageEffects.h */,
+				C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */,
+				C1E42807192A037E0086BC61 /* UIImageView+LBBlurredImage.h */,
+				C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */,
 			);
 			path = Vendors;
+			sourceTree = "<group>";
+		};
+		C1E4280B192A03900086BC61 /* MRoundedButton */ = {
+			isa = PBXGroup;
+			children = (
+				C1E4280C192A03900086BC61 /* MRoundedButton.h */,
+				C1E4280D192A03900086BC61 /* MRoundedButton.m */,
+			);
+			path = MRoundedButton;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,11 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1E42809192A037E0086BC61 /* UIImage+ImageEffects.m in Sources */,
+				C1E4280E192A03900086BC61 /* MRoundedButton.m in Sources */,
 				C113693718C3441100034926 /* ViewController.m in Sources */,
-				C13A4D0718D01E1000EBE3D9 /* UIImage+ImageEffects.m in Sources */,
+				C1E4280A192A037E0086BC61 /* UIImageView+LBBlurredImage.m in Sources */,
 				C113693118C3441100034926 /* AppDelegate.m in Sources */,
-				C13A4D0918D01E1000EBE3D9 /* UIImageView+LBBlurredImage.m in Sources */,
-				C1136A0818C9871100034926 /* MRoundedButton.m in Sources */,
 				C113692D18C3441100034926 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
