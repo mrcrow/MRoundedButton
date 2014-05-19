@@ -1,7 +1,7 @@
 MRoundedButton
 ==============
 
-MRoundedButton is a subclass of UIControl and the appearance is like the iOS 7 **Phone** app button or the button on the **Control Center**
+MRoundedButton is a subclass of UIControl and the appearance is like the iOS 7 **Phone** app button or the button on the **Control Center** and also perform fade in/out animation for touch event.
 
 Four button styles are suplied:
 
@@ -9,6 +9,19 @@ Four button styles are suplied:
     MRoundedButtonSubtitle          //  text with subtitle 
     MRoundedButtonCentralImage      //  central image
     MRoundedButtonImageWithSubtitle //  image with subtitle
+
+To set a transparent border:
+    
+    MRoundedButton *button = [[MRoundedButton alloc] initWithFrame:#<BUTTON_FRAME>
+                                                       buttonStyle:#<BUTTON_STYLE>];
+    button.borderWidth = 2;
+    button.borderColor = [UIColor clearColor];
+
+The `borderWidth` and `cornerRadius` are limited to `MIN(BUTTON_WIDTH / 2, BUTTON_HEIGHT / 2)`. 
+So if you want to make a **Round** MRoundedButton, just set the `cornerRadius` to `FLT_MAX`
+
+![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.PNG)
+
 
 MRoundedButtonAppearanceManager
 ===============================
