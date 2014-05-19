@@ -32,9 +32,9 @@ MRHollowView can be used to place the MRoundedButton on an image view or somethi
     
 TODO
 ====
-1. Fix typo (I'm not a native English speaker, so I need your help)
-2. Border issue
-3. Make it Cocoapods
+1. Make it Cocoapods
+2. Fix typo (may need your help)
+3. Border issue
     
 Lisence
 =======
