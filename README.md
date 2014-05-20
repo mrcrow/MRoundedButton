@@ -1,3 +1,5 @@
+![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.PNG)
+
 MRoundedButton
 ==============
 
@@ -20,8 +22,11 @@ To set a transparent border:
 The `borderWidth` and `cornerRadius` are limited to `MIN(BUTTON_WIDTH / 2, BUTTON_HEIGHT / 2)`. 
 So if you want to make a **Round** MRoundedButton, just set the `cornerRadius` to `FLT_MAX`
 
-![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.PNG)
+CocoaPods
+=========
 
+    platform :ios, '6.0'
+    pod "MRoundedButton", "~> 1.0"
 
 MRoundedButtonAppearanceManager
 ===============================
@@ -43,11 +48,14 @@ MRHollowView
 MRHollowView can be used to place the MRoundedButton on an image view or something.
 > In the drawRect: method, each subview of HRHollowView are EO cliped to its bounds. Then the superview content can be displayed via the hollowed shapes.
     
+Requirement
+===========
+`iOS 6.0+`
+
 TODO
 ====
-1. Make it Cocoapods
-2. Fix typo (may need your help)
-3. Border issue
+1. Fix typo (may need your help)
+2. Border issue
     
 Lisence
 =======
