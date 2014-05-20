@@ -57,7 +57,7 @@ TODO
 1. Fix typo (may need your help)
 2. Border issue
     
-Lisence
+License
 =======
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
