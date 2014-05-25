@@ -50,12 +50,19 @@ MRHollowView can be used to place the MRoundedButton on an image view or somethi
     
 Requirement
 ===========
-`iOS 6.0+`
+* iOS 6.0+
+
+Version Review
+==============
+* Ver 1.0
+  - First Commit
+* Ver 1.1
+  - Make it easy to hightlight the button via `setSelected:`
+  - Add disabled appearance when set `enabled` to `NO` 
+  - Changed some properties name to make it easy to be understood
 
 TODO
 ====
-1. Fix typo (may need your help)
-2. Border issue
     
 License
 =======
