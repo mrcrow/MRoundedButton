@@ -39,26 +39,26 @@
                                        kMRoundedButtonBorderWidth  : @2,
                                        kMRoundedButtonBorderColor  : [UIColor clearColor],
                                        kMRoundedButtonContentColor : [UIColor blackColor],
-                                       kMRoundedButtonContentAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonContentAnimateToColor : [UIColor whiteColor],
                                        kMRoundedButtonForegroundColor : [UIColor whiteColor],
-                                       kMRoundedButtonForegroundAnimationColor : [UIColor clearColor]};
+                                       kMRoundedButtonForegroundAnimateToColor : [UIColor clearColor]};
     NSDictionary *appearanceProxy2 = @{kMRoundedButtonCornerRadius : @25,
                                        kMRoundedButtonBorderWidth  : @1.5,
-                                       kMRoundedButtonRestoreHighlightState : @NO,
+                                       kMRoundedButtonRestoreSelectedState : @NO,
                                        kMRoundedButtonBorderColor : [UIColor colorWithWhite:0.3 alpha:1.0],
-                                       kMRoundedButtonBorderAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonBorderAnimateToColor : [UIColor whiteColor],
                                        kMRoundedButtonContentColor : [UIColor grayColor],
-                                       kMRoundedButtonContentAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonContentAnimateToColor : [UIColor whiteColor],
                                        kMRoundedButtonForegroundColor : [[UIColor whiteColor] colorWithAlphaComponent:0.5]};
     NSDictionary *appearanceProxy3 = @{kMRoundedButtonCornerRadius : @40,
                                        kMRoundedButtonBorderWidth  : @2,
-                                       kMRoundedButtonRestoreHighlightState : @NO,
+                                       kMRoundedButtonRestoreSelectedState : @NO,
                                        kMRoundedButtonBorderColor : [UIColor clearColor],
-                                       kMRoundedButtonBorderAnimationColor : [UIColor whiteColor],
+                                       kMRoundedButtonBorderAnimateToColor : [UIColor whiteColor],
                                        kMRoundedButtonContentColor : [UIColor whiteColor],
-                                       kMRoundedButtonContentAnimationColor : [UIColor blackColor],
+                                       kMRoundedButtonContentAnimateToColor : [UIColor blackColor],
                                        kMRoundedButtonForegroundColor : [[UIColor blackColor] colorWithAlphaComponent:0.5],
-                                       kMRoundedButtonForegroundAnimationColor : [UIColor whiteColor]};
+                                       kMRoundedButtonForegroundAnimateToColor : [UIColor whiteColor]};
     
     [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy1 forIdentifier:@"1"];
     [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy2 forIdentifier:@"2"];

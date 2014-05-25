@@ -34,6 +34,7 @@ CGFloat const MRoundedButtonMaxValue = CGFLOAT_MAX;
 #error This file must be compiled with ARC. Convert your project to ARC or specify the -fobjc-arc flag.
 #endif
 
+#pragma mark - CGRect extend
 static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 {
     return CGRectMake(CGRectGetMinX(rect) + insets.left,
@@ -42,6 +43,7 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
                       CGRectGetHeight(rect) - insets.top - insets.bottom);
 }
 
+#pragma mark - MRTextLayer
 @interface MRTextLayer : UIView
 @property (nonatomic, strong)   UILabel *textLabel;
 @end
@@ -72,6 +74,7 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 
 @end
 
+#pragma mark - MRImageLayer
 @interface MRImageLayer : UIView
 @property (nonatomic, strong)   UIImageView *imageView;
 @end
@@ -99,6 +102,7 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 
 @end
 
+#pragma mark - MRoundedButton
 @interface MRoundedButton ()
 @property (nonatomic, strong)                   UIColor                 *backgroundColorCache;
 @property (assign, getter = isTrackingInside)   BOOL                    trackingInside;
@@ -121,10 +125,9 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         self.layer.masksToBounds = YES;
         
         _mr_buttonStyle = style;
-        _mr_buttonHighlighted = NO;
         _contentColor = self.tintColor;
         _foregroundColor = [UIColor whiteColor];
-        _restoreHighlightState = YES;
+        _restoreSelectedState = YES;
         _trackingInside = NO;
         _cornerRadius = 0.0;
         _borderWidth = 0.0;
@@ -321,68 +324,86 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
     return self.imageLayer.imageView;
 }
 
-#pragma mark - MRoundedButton animation
-- (void)fadeAnimation
+- (void)setEnabled:(BOOL)enabled
 {
-    _mr_buttonHighlighted = !_mr_buttonHighlighted;
-    if (self.mr_buttonHighlighted)
+    [super setEnabled:enabled];
+    [UIView animateWithDuration:0.2 animations:^{
+        self.foregroundView.alpha = enabled ? 1.0 : 0.5;
+    }];
+}
+
+- (void)setSelected:(BOOL)selected
+{
+    [super setSelected:selected];
+    if (selected)
     {
-        [UIView animateWithDuration:0.2 animations:^{
-            self.userInteractionEnabled = NO;
-            if (self.contentAnimationColor)
-            {
-                self.textLayer.backgroundColor = self.contentAnimationColor;
-                self.detailTextLayer.backgroundColor = self.contentAnimationColor;
-                self.imageLayer.backgroundColor = self.contentAnimationColor;
-            }
-            
-            if (self.borderAnimationColor &&
-                self.foregroundAnimationColor &&
-                self.borderAnimationColor == self.foregroundAnimationColor)
-            {
-                self.backgroundColorCache = self.backgroundColor;
-                self.foregroundView.backgroundColor = [UIColor clearColor];
-                self.backgroundColor = self.borderAnimationColor;
-                return;
-            }
-            
-            if (self.borderAnimationColor)
-            {
-                self.layer.borderColor = self.borderAnimationColor.CGColor;
-            }
-            
-            if (self.foregroundAnimationColor)
-            {
-                self.foregroundView.backgroundColor = self.foregroundAnimationColor;
-            }
-        } completion:^(BOOL finished) {
-            self.userInteractionEnabled = YES;
-        }];
+        [self fadeInAnimation];
     }
     else
     {
-        [UIView animateWithDuration:0.2 animations:^{
-            self.userInteractionEnabled = NO;
-            self.textLayer.backgroundColor = self.contentColor;
-            self.detailTextLayer.backgroundColor = self.contentColor;
-            self.imageLayer.backgroundColor = self.contentColor;
-            
-            if (self.borderAnimationColor &&
-                self.foregroundAnimationColor &&
-                self.borderAnimationColor == self.foregroundAnimationColor)
-            {
-                self.foregroundView.backgroundColor = self.foregroundColor;
-                self.backgroundColor = self.backgroundColorCache;
-                self.backgroundColorCache = nil;
-                return;
-            }
-            
-            self.foregroundView.backgroundColor = self.foregroundColor;
-            self.layer.borderColor = self.borderColor.CGColor;
-        } completion:^(BOOL finished) {
-            self.userInteractionEnabled = YES;
-        }];
+        [self fadeOutAnimation];
     }
+}
+
+#pragma mark - Fade animation
+- (void)fadeInAnimation
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.userInteractionEnabled = NO;
+        if (self.contentAnimateToColor)
+        {
+            self.textLayer.backgroundColor = self.contentAnimateToColor;
+            self.detailTextLayer.backgroundColor = self.contentAnimateToColor;
+            self.imageLayer.backgroundColor = self.contentAnimateToColor;
+        }
+        
+        if (self.borderAnimateToColor &&
+            self.foregroundAnimateToColor &&
+            self.borderAnimateToColor == self.foregroundAnimateToColor)
+        {
+            self.backgroundColorCache = self.backgroundColor;
+            self.foregroundView.backgroundColor = [UIColor clearColor];
+            self.backgroundColor = self.borderAnimateToColor;
+            return;
+        }
+        
+        if (self.borderAnimateToColor)
+        {
+            self.layer.borderColor = self.borderAnimateToColor.CGColor;
+        }
+        
+        if (self.foregroundAnimateToColor)
+        {
+            self.foregroundView.backgroundColor = self.foregroundAnimateToColor;
+        }
+    } completion:^(BOOL finished) {
+        self.userInteractionEnabled = YES;
+    }];
+}
+
+- (void)fadeOutAnimation
+{
+    [UIView animateWithDuration:0.2 animations:^{
+        self.userInteractionEnabled = NO;
+        self.textLayer.backgroundColor = self.contentColor;
+        self.detailTextLayer.backgroundColor = self.contentColor;
+        self.imageLayer.backgroundColor = self.contentColor;
+        
+        if (self.borderAnimateToColor &&
+            self.foregroundAnimateToColor &&
+            self.borderAnimateToColor == self.foregroundAnimateToColor)
+        {
+            self.foregroundView.backgroundColor = self.foregroundColor;
+            self.backgroundColor = self.backgroundColorCache;
+            self.backgroundColorCache = nil;
+            return;
+        }
+        
+        self.foregroundView.backgroundColor = self.foregroundColor;
+        self.layer.borderColor = self.borderColor.CGColor;
+    } completion:^(BOOL finished) {
+        self.userInteractionEnabled = YES;
+    }];
 }
 
 #pragma mark - Touchs
@@ -399,24 +420,23 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 
 - (BOOL)beginTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    self.highlighted = YES;
-    [self fadeAnimation];
     self.trackingInside = YES;
+    self.selected = !self.selected;
     return [super beginTrackingWithTouch:touch withEvent:event];
 }
 
 - (BOOL)continueTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     BOOL wasTrackingInside = self.trackingInside;
-    self.trackingInside = self.highlighted = [self isTouchInside];
+    self.trackingInside = [self isTouchInside];
     
     if (wasTrackingInside && !self.isTrackingInside)
     {
-        [self fadeAnimation];
+        self.selected = !self.selected;
     }
     else if (!wasTrackingInside && self.isTrackingInside)
     {
-        [self fadeAnimation];
+        self.selected = !self.selected;
     }
     
     return [super continueTrackingWithTouch:touch withEvent:event];
@@ -425,12 +445,9 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 - (void)endTrackingWithTouch:(UITouch *)touch withEvent:(UIEvent *)event
 {
     self.trackingInside = [self isTouchInside];
-    if (self.isTrackingInside)
+    if (self.isTrackingInside && self.restoreSelectedState)
     {
-        if (self.restoreHighlightState)
-        {
-            [self fadeAnimation];
-        }
+        self.selected = !self.selected;
     }
     
     self.trackingInside = NO;
@@ -439,9 +456,10 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 
 - (void)cancelTrackingWithEvent:(UIEvent *)event
 {
-    if (self.isTrackingInside)
+    self.trackingInside = [self isTouchInside];
+    if (self.isTrackingInside && self.restoreSelectedState)
     {
-        [self fadeAnimation];
+        self.selected = !self.selected;
     }
     
     self.trackingInside = NO;
@@ -450,15 +468,16 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 
 @end
 
+#pragma mark - MRoundedButtonAppearanceManager
 NSString *const kMRoundedButtonCornerRadius                 = @"cornerRadius";
 NSString *const kMRoundedButtonBorderWidth                  = @"borderWidth";
 NSString *const kMRoundedButtonBorderColor                  = @"borderColor";
-NSString *const kMRoundedButtonBorderAnimationColor         = @"borderAnimationColor";
+NSString *const kMRoundedButtonBorderAnimateToColor         = @"borderAnimateToColor";
 NSString *const kMRoundedButtonContentColor                 = @"contentColor";
-NSString *const kMRoundedButtonContentAnimationColor        = @"contentAnimationColor";
+NSString *const kMRoundedButtonContentAnimateToColor        = @"contentAnimateToColor";
 NSString *const kMRoundedButtonForegroundColor              = @"foregroundColor";
-NSString *const kMRoundedButtonForegroundAnimationColor     = @"foregroundAnimationColor";
-NSString *const kMRoundedButtonRestoreHighlightState        = @"restoreHighlightState";
+NSString *const kMRoundedButtonForegroundAnimateToColor     = @"foregroundAnimateToColor";
+NSString *const kMRoundedButtonRestoreSelectedState         = @"restoreSelectedState";
 
 @interface MRoundedButtonAppearanceManager ()
 @property (nonatomic, strong)   NSMutableDictionary *appearanceProxys;
@@ -517,6 +536,7 @@ NSString *const kMRoundedButtonRestoreHighlightState        = @"restoreHighlight
 
 @end
 
+#pragma mark - MRHollowBackgroundView
 @implementation MRHollowBackgroundView
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -524,7 +544,6 @@ NSString *const kMRoundedButtonRestoreHighlightState        = @"restoreHighlight
     self = [super initWithFrame:frame];
     if (self)
     {
-        // Initialization code
         self.opaque = NO;
         self.backgroundColor = [UIColor clearColor];
     }
