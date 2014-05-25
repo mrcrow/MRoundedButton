@@ -43,7 +43,7 @@ extern CGFloat const MRoundedButtonMaxValue;
 @property (nonatomic, strong)   UIColor                     *borderAnimateToColor;      UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *contentAnimateToColor;     UI_APPEARANCE_SELECTOR
 @property (nonatomic, strong)   UIColor                     *foregroundAnimateToColor;  UI_APPEARANCE_SELECTOR
-@property (nonatomic, assign)   BOOL                        restoreSelectedState;      UI_APPEARANCE_SELECTOR
+@property (nonatomic, assign)   BOOL                        restoreSelectedState;       UI_APPEARANCE_SELECTOR
 
 @property (nonatomic, weak)     UILabel                     *textLabel;
 @property (nonatomic, weak)     UILabel                     *detailTextLabel;
