@@ -1,4 +1,4 @@
-![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.PNG)
+![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.gif)
 
 MRoundedButton
 ==============
@@ -31,7 +31,7 @@ CocoaPods
 MRoundedButtonAppearanceManager
 ===============================
 
-MRoundedButtonAppearanceManager is the appearance manager for the MRoundedButton, each appearance information can be stored in a [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object to make it reusable in the whole project:
+MRoundedButtonAppearanceManager is the appearance manager for MRoundedButton, each appearance information can be stored in a [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object to make it reusable in the whole project:
 
     NSDictionary *appearanceProxy = @{kMRoundedButtonCornerRadius : @40,
                                       kMRoundedButtonBorderWidth  : @2,
@@ -46,7 +46,7 @@ MRHollowView
 ============
 
 MRHollowView can be used to place the MRoundedButton on an image view or something.
-> In the drawRect: method, each subview of HRHollowView are cliped to its bounds by `CGContextEOFillPath()`. As the result, the superview content can be displayed from the hollowed shapes.
+> In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. As the result, the superview content can be displayed from the hollowed shapes.
     
 Requirement
 ===========
