@@ -19,8 +19,8 @@ To set a transparent border:
     button.borderWidth = 2;
     button.borderColor = [UIColor clearColor];
 
-The `borderWidth` and `cornerRadius` are limited to `MIN(BUTTON_WIDTH / 2, BUTTON_HEIGHT / 2)`. 
-So if you want to make a **Round** MRoundedButton, just set the `cornerRadius` to `FLT_MAX`
+The value of `borderWidth` and `cornerRadius` are limited to `MIN(BUTTON_WIDTH / 2, BUTTON_HEIGHT / 2)`. 
+Setting the `cornerRadius` to `FLT_MAX` can easily make a round button.
 
 CocoaPods
 =========
@@ -31,7 +31,7 @@ CocoaPods
 MRoundedButtonAppearanceManager
 ===============================
 
-MRoundedButtonAppearanceManager is the appearance manager for the MRoundedButton, each appearance information can be stored in an [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object with a unique identifier:
+MRoundedButtonAppearanceManager is the appearance manager for the MRoundedButton, each appearance information can be stored in a [NSDictionary](https://developer.apple.com/library/ios/documentation/Cocoa/Reference/Foundation/Classes/NSDictionary_Class/Reference/Reference.html) object to make it reusable in the whole project:
 
     NSDictionary *appearanceProxy = @{kMRoundedButtonCornerRadius : @40,
                                       kMRoundedButtonBorderWidth  : @2,
@@ -46,7 +46,7 @@ MRHollowView
 ============
 
 MRHollowView can be used to place the MRoundedButton on an image view or something.
-> In the drawRect: method, each subview of HRHollowView are EO cliped to its bounds. Then the superview content can be displayed via the hollowed shapes.
+> In the drawRect: method, each subview of HRHollowView are cliped to its bounds by `CGContextEOFillPath()`. As the result, the superview content can be displayed from the hollowed shapes.
     
 Requirement
 ===========
