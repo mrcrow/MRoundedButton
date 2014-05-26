@@ -45,9 +45,9 @@
     NSDictionary *appearanceProxy2 = @{kMRoundedButtonCornerRadius : @25,
                                        kMRoundedButtonBorderWidth  : @1.5,
                                        kMRoundedButtonRestoreSelectedState : @NO,
-                                       kMRoundedButtonBorderColor : [UIColor colorWithWhite:0.3 alpha:1.0],
+                                       kMRoundedButtonBorderColor : [[UIColor blackColor] colorWithAlphaComponent:0.5],
                                        kMRoundedButtonBorderAnimateToColor : [UIColor whiteColor],
-                                       kMRoundedButtonContentColor : [UIColor grayColor],
+                                       kMRoundedButtonContentColor : [[UIColor blackColor] colorWithAlphaComponent:0.5],
                                        kMRoundedButtonContentAnimateToColor : [UIColor whiteColor],
                                        kMRoundedButtonForegroundColor : [[UIColor whiteColor] colorWithAlphaComponent:0.5]};
     NSDictionary *appearanceProxy3 = @{kMRoundedButtonCornerRadius : @40,

@@ -20,6 +20,7 @@
 		C113694218C3441100034926 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C113692418C3441100034926 /* UIKit.framework */; };
 		C113694A18C3441100034926 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C113694818C3441100034926 /* InfoPlist.strings */; };
 		C113694C18C3441100034926 /* AnimateButtonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C113694B18C3441100034926 /* AnimateButtonTests.m */; };
+		C11DB9CA193389D40028F7D3 /* present.gif in Resources */ = {isa = PBXBuildFile; fileRef = C11DB9C9193389D40028F7D3 /* present.gif */; };
 		C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C168241F18E27D2A00BDC643 /* twitter@2x.png */; };
 		C1E42809192A037E0086BC61 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */; };
 		C1E4280A192A037E0086BC61 /* UIImageView+LBBlurredImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C1E42808192A037E0086BC61 /* UIImageView+LBBlurredImage.m */; };
@@ -56,6 +57,7 @@
 		C113694718C3441100034926 /* AnimateButtonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AnimateButtonTests-Info.plist"; sourceTree = "<group>"; };
 		C113694918C3441100034926 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C113694B18C3441100034926 /* AnimateButtonTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AnimateButtonTests.m; sourceTree = "<group>"; };
+		C11DB9C9193389D40028F7D3 /* present.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = present.gif; sourceTree = SOURCE_ROOT; };
 		C168241F18E27D2A00BDC643 /* twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "twitter@2x.png"; sourceTree = "<group>"; };
 		C1E42805192A037E0086BC61 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		C1E42806192A037E0086BC61 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		C113692718C3441100034926 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C11DB9C9193389D40028F7D3 /* present.gif */,
 				C1E42813192A08150086BC61 /* present.PNG */,
 				C168241F18E27D2A00BDC643 /* twitter@2x.png */,
 				C113692818C3441100034926 /* AnimateButton-Info.plist */,
@@ -258,6 +261,7 @@
 				C113693918C3441100034926 /* Images.xcassets in Resources */,
 				C113692B18C3441100034926 /* InfoPlist.strings in Resources */,
 				C168242018E27D2A00BDC643 /* twitter@2x.png in Resources */,
+				C11DB9CA193389D40028F7D3 /* present.gif in Resources */,
 				C1E42814192A08150086BC61 /* present.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
