@@ -1,4 +1,5 @@
 ![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.gif)
+Powered by [Gifrocket](http://www.gifrocket.com) (But looks like a piece of shit, anyway, it is a gif)
 
 MRoundedButton
 ==============
