@@ -20,7 +20,7 @@ To set a transparent border:
     button.borderColor = [UIColor clearColor];
 
 The value of `borderWidth` and `cornerRadius` are limited to `MIN(BUTTON_WIDTH / 2, BUTTON_HEIGHT / 2)`. 
-Setting the `cornerRadius` to `FLT_MAX` can easily make a round button.
+Setting the `cornerRadius` to `FLT_MAX` or `MRoundedButtonMaxValue` can easily make a round button.
 
 CocoaPods
 =========
