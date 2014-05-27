@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
   s.name             = "MRoundedButton"  
-  s.version          = "1.0"  
+  s.version          = "1.1"  
   s.summary          = "UIControl subclass like iOS 7 Phone app button"  
   s.description      = <<-DESC  
                        It is like iOS 7 Phone app button and also provided MRoundedButtonAppearanceManager and MRHollowView for to extend the its usage
