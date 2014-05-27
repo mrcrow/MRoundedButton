@@ -46,8 +46,8 @@ MRHollowView
 ============
 
 MRHollowView can be used to place the MRoundedButton on an image view or something.
-> In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. As the result, the superview content can be displayed from the hollowed shapes.
-    
+> In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. Then the superview can be displayed from the hollowed shapes.
+
 Requirement
 ===========
 * iOS 6.0+
