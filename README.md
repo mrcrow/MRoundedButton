@@ -1,6 +1,6 @@
 ![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.gif)
 
-> Powered by [Gifrocket](http://www.gifrocket.com) (But looks like a piece of shit, anyway, it is a gif)
+> Powered by [Gifrocket](http://www.gifrocket.com)
 
 MRoundedButton
 ==============
@@ -60,11 +60,12 @@ Version Review
   - First Commit
 * Ver 1.1
   - Make it easy to hightlight the button via `setSelected:`
-  - Add disabled appearance when set `enabled` to `NO` 
+  - Add disabled appearance when set `enabled` to `NO`, need to be improved
   - Changed some properties name to make it easy to be understood
 
 TODO
 ====
+* Disable appearance
     
 License
 =======
