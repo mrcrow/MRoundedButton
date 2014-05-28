@@ -44,7 +44,7 @@ MRoundedButtonAppearanceManager is the appearance manager for MRoundedButton, ea
                                       kMRoundedButtonForegroundAnimationColor : [UIColor clearColor]};
     [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy1 forIdentifier:#<UNIQUE_IDENTIFIER>];
     
-MRHollowView
+MRHollowBackgroundView
 ============
 
 MRHollowView can be used to place the MRoundedButton on an image view or something.
