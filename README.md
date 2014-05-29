@@ -1,6 +1,4 @@
-![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.gif)
-
-> Powered by [Gifrocket](http://www.gifrocket.com)
+![image](present.gif)
 
 MRoundedButton
 ==============
