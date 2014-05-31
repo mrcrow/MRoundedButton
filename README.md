@@ -1,4 +1,6 @@
-![image](https://raw.githubusercontent.com/mrcrow/MRoundedButton/master/present.gif)
+![image](present.gif)
+
+> Many thanks to **[@ZevEisenberg](https://github.com/ZevEisenberg)**
 
 MRoundedButton
 ==============
@@ -42,12 +44,12 @@ MRoundedButtonAppearanceManager is the appearance manager for MRoundedButton, ea
                                       kMRoundedButtonForegroundAnimationColor : [UIColor clearColor]};
     [MRoundedButtonAppearanceManager registerAppearanceProxy:appearanceProxy1 forIdentifier:#<UNIQUE_IDENTIFIER>];
     
-MRHollowView
+MRHollowBackgroundView
 ============
 
 MRHollowView can be used to place the MRoundedButton on an image view or something.
-> In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. As the result, the superview content can be displayed from the hollowed shapes.
-    
+> In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. Then the superview can be displayed from the hollowed shapes.
+
 Requirement
 ===========
 * iOS 6.0+
@@ -58,11 +60,12 @@ Version Review
   - First Commit
 * Ver 1.1
   - Make it easy to hightlight the button via `setSelected:`
-  - Add disabled appearance when set `enabled` to `NO` 
+  - Add disabled appearance when set `enabled` to `NO`, need to be improved
   - Changed some properties name to make it easy to be understood
 
 TODO
 ====
+* Disable appearance
     
 License
 =======
