@@ -349,7 +349,6 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 - (void)fadeInAnimation
 {
     [UIView animateWithDuration:0.2 animations:^{
-        self.userInteractionEnabled = NO;
         if (self.contentAnimateToColor)
         {
             self.textLayer.backgroundColor = self.contentAnimateToColor;
@@ -376,15 +375,12 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         {
             self.foregroundView.backgroundColor = self.foregroundAnimateToColor;
         }
-    } completion:^(BOOL finished) {
-        self.userInteractionEnabled = YES;
     }];
 }
 
 - (void)fadeOutAnimation
 {
     [UIView animateWithDuration:0.2 animations:^{
-        self.userInteractionEnabled = NO;
         self.textLayer.backgroundColor = self.contentColor;
         self.detailTextLayer.backgroundColor = self.contentColor;
         self.imageLayer.backgroundColor = self.contentColor;
@@ -401,8 +397,6 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         
         self.foregroundView.backgroundColor = self.foregroundColor;
         self.layer.borderColor = self.borderColor.CGColor;
-    } completion:^(BOOL finished) {
-        self.userInteractionEnabled = YES;
     }];
 }
 
