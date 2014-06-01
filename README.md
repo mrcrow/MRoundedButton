@@ -28,7 +28,9 @@ CocoaPods
 =========
 
     platform :ios, '6.0'
-    pod "MRoundedButton", "~> 1.1"
+    pod "MRoundedButton", "~> 1.0"
+
+> The 1.1 version will be back soon
 
 MRoundedButtonAppearanceManager
 ===============================
