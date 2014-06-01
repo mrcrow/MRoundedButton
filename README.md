@@ -30,7 +30,7 @@ CocoaPods
     platform :ios, '6.0'
     pod "MRoundedButton", "~> 1.0"
 
-> The 1.1 version will be back soon
+> The 1.1 version is not CocoaPods ready, can download it from [here](https://github.com/mrcrow/MRoundedButton/releases)
 
 MRoundedButtonAppearanceManager
 ===============================
@@ -64,6 +64,7 @@ Version Review
   - Make it easy to hightlight the button via `setSelected:`
   - Add disabled appearance when set `enabled` to `NO`, need to be improved
   - Changed some properties name to make it easy to be understood
+  - Fixed `userInteractionEnabled` issue
 
 TODO
 ====
