@@ -49,14 +49,14 @@ MRoundedButtonAppearanceManager is the appearance manager for MRoundedButton, ea
 MRHollowBackgroundView
 ============
 
-MRHollowView can be used to place the MRoundedButton on an image view or something.
+MRHollowBackgroundView can be used to place the MRoundedButton on an image view or something.
 > In the drawRect: method, each `subview` of HRHollowView will be cliped to its bounds by `CGContextEOFillPath()`. Then the superview can be displayed from the hollowed shapes.
 
 Requirement
 ===========
 * iOS 6.0+
 
-Version Review
+Release Notes
 ==============
 * Ver 1.0
   - First Commit
