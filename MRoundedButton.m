@@ -26,13 +26,15 @@
 
 CGFloat const MRoundedButtonMaxValue = CGFLOAT_MAX;
 
-#define M_MAX_CORNER_RADIUS MIN(CGRectGetWidth(self.bounds) / 2.0, CGRectGetHeight(self.bounds) / 2.0)
-#define M_MAX_BORDER_WIDTH  M_MAX_CORNER_RADIUS
-#define M_MAGICAL_VALUE     0.29
-
 #if !__has_feature(objc_arc)
 #error This file must be compiled with ARC. Convert your project to ARC or specify the -fobjc-arc flag.
 #endif
+
+#define MR_MAX_CORNER_RADIUS    MIN(CGRectGetWidth(self.bounds) / 2.0, CGRectGetHeight(self.bounds) / 2.0)
+#define MR_MAX_BORDER_WIDTH     MR_MAX_CORNER_RADIUS
+#define MR_MAGICAL_VALUE        0.29
+
+#define MR_VERSION_IOS_8        (floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_7_1)
 
 #pragma mark - CGRect extend
 static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
@@ -61,7 +63,14 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         self.textLabel.adjustsFontSizeToFitWidth = YES;
         self.textLabel.minimumScaleFactor = 0.1;
         self.textLabel.numberOfLines = 1;
-        self.layer.mask = self.textLabel.layer;
+        if (MR_VERSION_IOS_8)
+        {
+            self.maskView = self.textLabel;
+        }
+        else
+        {
+            self.layer.mask = self.textLabel.layer;
+        }
     }
     return self;
 }
@@ -89,7 +98,14 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
         self.imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         self.imageView.backgroundColor = [UIColor clearColor];
-        self.layer.mask = self.imageView.layer;
+        if (MR_VERSION_IOS_8)
+        {
+            self.maskView = self.imageView;
+        }
+        else
+        {
+            self.layer.mask = self.imageView.layer;
+        }
     }
     return self;
 }
@@ -174,8 +190,8 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 - (CGRect)boxingRect
 {
     CGRect internalRect = CGRectInset(self.bounds,
-                                      self.layer.cornerRadius * M_MAGICAL_VALUE + self.layer.borderWidth,
-                                      self.layer.cornerRadius * M_MAGICAL_VALUE + self.layer.borderWidth);
+                                      self.layer.cornerRadius * MR_MAGICAL_VALUE + self.layer.borderWidth,
+                                      self.layer.cornerRadius * MR_MAGICAL_VALUE + self.layer.borderWidth);
     return CGRectEdgeInset(internalRect, self.contentEdgeInsets);
 }
 
@@ -183,8 +199,8 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 {
     [super layoutSubviews];
     
-    CGFloat cornerRadius = self.layer.cornerRadius = MAX(MIN(M_MAX_CORNER_RADIUS, self.cornerRadius), 0);
-    CGFloat borderWidth = self.layer.borderWidth = MAX(MIN(M_MAX_BORDER_WIDTH, self.borderWidth), 0);
+    CGFloat cornerRadius = self.layer.cornerRadius = MAX(MIN(MR_MAX_CORNER_RADIUS, self.cornerRadius), 0);
+    CGFloat borderWidth = self.layer.borderWidth = MAX(MIN(MR_MAX_BORDER_WIDTH, self.borderWidth), 0);
     
     _borderWidth = borderWidth;
     _cornerRadius = cornerRadius;
@@ -451,7 +467,7 @@ static CGRect CGRectEdgeInset(CGRect rect, UIEdgeInsets insets)
 - (void)cancelTrackingWithEvent:(UIEvent *)event
 {
     self.trackingInside = [self isTouchInside];
-    if (self.isTrackingInside && self.restoreSelectedState)
+    if (self.isTrackingInside)
     {
         self.selected = !self.selected;
     }
